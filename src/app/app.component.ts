@@ -13,6 +13,8 @@ import {Component} from '@angular/core';
 export class AppComponent {
   inputText: string = '';
   result: boolean | null = null;
+  inputText2: string = '';
+  result2: boolean | null = null;
 
   isPalindrome() {
   const prepText = this.inputText.toLowerCase().replace(/[^a-zа-яё]/g, '');
@@ -24,25 +26,25 @@ export class AppComponent {
   }
 
   isPalindrome2() {
-    const prepText = this.inputText.toLowerCase().replace(/[^a-zа-яё]/g, '');
-      console.log(prepText)
-      console.log({prepText})
+    const prepText2 = this.inputText2.toLowerCase().replace(/[^a-zа-яё]/g, '');
+      console.log(prepText2)
+      console.log({prepText2})
 
       let left = 0;
-      let right = prepText.length -1;
+      let right = prepText2.length -1;
 
       while(left < right) {
-        if (prepText[left] !== prepText[right]) {
-          this.result == false;
+        if (prepText2[left] !== prepText2[right]) {
+          this.result2 = false;
           return;
         }
         left++;
         right--;
       }
 
-        this.result = true;
-        console.log(prepText);
-        console.log({ result: this.result });
+        this.result2 = true;
+        console.log(prepText2);
+        console.log({ result2: this.result2 });
       }
       
     }
