@@ -31,6 +31,9 @@
     <div class="input-pal-group">
       <input [(ngModel)]="inputText" class="pal-text" placeholder="Enter your palindrome">
       <button class="btn-pal" (click)="isPalindrome()">To check</button>
+      <div *ngIf="result !== null" class="result" >
+      {{ result ? "Palindrome" : "This is not palindrome" }}</div>
+
     </div>
   </div>
   

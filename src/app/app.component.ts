@@ -11,11 +11,15 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   inputText: string = '';
+  result: boolean | null = null;
+
   isPalindrome() {
     const prepText = this.inputText.toLowerCase().replace(/[^a-z]/g, '');
     console.log(prepText)
     console.log({prepText})
-  }
 
+    this.result = prepText === prepText.split('').reverse().join('');
+    console.log({result: this.result})
+  }
 }
 
