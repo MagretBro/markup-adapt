@@ -1,8 +1,4 @@
-// import {MatInputModule} from '@angular/material/input';
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import { FormsModule } from '@angular/forms';
 
-import { NgIf } from '@angular/common';
 import {Component} from '@angular/core';
 
 @Component({
@@ -20,15 +16,18 @@ export class AppComponent {
   const prepText = this.inputText.toLowerCase().replace(/[^a-zа-яё]/g, '');
     console.log(prepText)
     console.log({prepText})
+    console.time('isPalindrome');
 
     this.result = prepText === prepText.split('').reverse().join('');
-    console.log({result: this.result})
+    console.log({result: this.result});
+    console.timeEnd('isPalindrome');
   }
 
   isPalindrome2() {
     const prepText2 = this.inputText2.toLowerCase().replace(/[^a-zа-яё]/g, '');
       console.log(prepText2)
       console.log({prepText2})
+      console.time('isPalindrome2');
 
       let left = 0;
       let right = prepText2.length -1;
@@ -45,6 +44,8 @@ export class AppComponent {
         this.result2 = true;
         console.log(prepText2);
         console.log({ result2: this.result2 });
+        console.timeEnd('isPalindrome2');
+
       }
       
     }
