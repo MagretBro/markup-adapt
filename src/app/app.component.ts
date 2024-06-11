@@ -1,7 +1,6 @@
 // import {MatInputModule} from '@angular/material/input';
 // import { MatFormFieldModule } from '@angular/material/form-field';
 // import { FormsModule } from '@angular/forms';
-//  1 версия частично работает
 
 import {Component} from '@angular/core';
 
@@ -11,5 +10,12 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  inputText: string = '';
+  isPalindrome() {
+    const prepText = this.inputText.toLowerCase().replace(/[^a-z]/g, '');
+    console.log(prepText)
+    console.log({prepText})
   }
+
+}
 
