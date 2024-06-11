@@ -22,9 +22,13 @@
       </div>
   </div>
 
+
+
+  <!-- ///////// 2.1 //////////// -->
+
   <div class="new-task"></div>
 
-  <div class="name-task">Palindrome-checkup</div>
+  <div class="name-task">Palindrome-checkup о(1)</div>
 
   <div class="palindrome">
     <div class="input-pal-group">
@@ -37,7 +41,20 @@
   
   <div class="new-task"></div>
 
+  <!-- ///////// 2.2 //////////// -->
 
+  <div class="name-task">Palindrome-checkup о(n)</div>
+
+  <div class="palindrome">
+    <div class="input-pal-group">
+      <input [(ngModel)]="inputText" class="pal-text" placeholder="Enter your palindrome">
+      <button class="btn-pal" (click)="isPalindrome()">To check</button>
+    </div>
+    <div *ngIf="result !== null" class="result" >
+      {{ result ? "It Is a Palindrome!" : "This is not palindrome" }}</div>
+  </div>
+  
+  <div class="new-task"></div>
 
 
 <!-- <router-outlet></router-outlet> -->
