@@ -1,4 +1,4 @@
-<div class="start">Angular-Material</div>
+<div class="start">Angular-Material Исходный вариант</div>
 
 <form class="example-form">
   <mat-form-field class="example-full-width">
@@ -6,16 +6,14 @@
     <input matInput placeholder="Ex. Pizza" value="Sushi">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
+  <!-- <mat-form-field class="example-full-width">
     <mat-label>Leave a comment</mat-label>
     <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
+  </mat-form-field> -->
 </form>
 
-<div class="start">Angular-Bstrap</div>
+<div class="start">Angular Gереписан на flex</div>
 
-<div class="start">Angular-Bstrap 1 Версия частично</div>
-  <!-- <form class="example-form"> -->
 
   <div class="example-form">
       <div class="input-group">
@@ -24,31 +22,22 @@
       </div>
   </div>
 
+  <div class="new-task"></div>
 
-  <div class="palindrome-task">Palindrome-checkup</div>
+  <div class="name-task">Palindrome-checkup</div>
 
   <div class="palindrome">
     <div class="input-pal-group">
       <input [(ngModel)]="inputText" class="pal-text" placeholder="Enter your palindrome">
       <button class="btn-pal" (click)="isPalindrome()">To check</button>
-      <div *ngIf="result !== null" class="result" >
-      {{ result ? "Palindrome" : "This is not palindrome" }}</div>
-
     </div>
+    <div *ngIf="result !== null" class="result" >
+      {{ result ? "It Is a Palindrome!" : "This is not palindrome" }}</div>
   </div>
   
-  
+  <div class="new-task"></div>
 
 
-
-  
-  <!-- <mat-form-field class="example-full-width">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field> -->
-
-
-<!-- </form> -->
 
 
 <!-- <router-outlet></router-outlet> -->
