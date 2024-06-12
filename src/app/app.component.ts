@@ -13,7 +13,7 @@ export class AppComponent {
   result2: boolean | null = null;
 
   isPalindrome() {
-  const prepText = this.inputText.toLowerCase().replace(/[^a-zа-яё]/g, '');
+  const prepText = this.inputText.toLowerCase().replace(/[^a-zа-яё0-9]/g, '');
     console.log(prepText)
     console.log({prepText})
     console.time('isPalindrome');
@@ -24,7 +24,7 @@ export class AppComponent {
   }
 
   isPalindrome2() {
-    const prepText2 = this.inputText2.toLowerCase().replace(/[^a-zа-яё]/g, '');
+    const prepText2 = this.inputText2.toLowerCase().replace(/[^a-zа-яё0-9]/g, '');
       console.log(prepText2)
       console.log({prepText2})
       console.time('isPalindrome2');
