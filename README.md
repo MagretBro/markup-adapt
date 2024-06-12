@@ -1,3 +1,16 @@
+
+Реализована верстка angular-material компонента input с помощью flex
+
+написана логика проверки палиндрома методами:
+Palindrome-checkup о(1) - Константный алгоритм
+Palindrome-checkup о(n) - Линейный алгоритм
+
++ оценка времени
++ написаны тесты на Palindrome-checkup о(1) - Константный алгоритм
+
+
+
+
 # MarkupNg16
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
