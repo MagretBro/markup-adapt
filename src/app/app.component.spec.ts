@@ -31,6 +31,7 @@ describe('AppComponent', () => {
     component = fixture.componentInstance; // присваеваем получение доступа к комп и его сво-вам и методам. чтоб делать тесты
     fixture.detectChanges();
   });
+
   it('should create the app', ()=>{
     expect(component).toBeTruthy();
   });
@@ -71,4 +72,49 @@ describe('AppComponent', () => {
     component.isPalindrome();
     expect(component.result).toBe(false);
   });
+
+
+  ////////// ispalindrome2
+
+
+  // 'should identify "Аргентина манит негра" as a palindrome'
+  it("Аргентина манит негра", () => {
+    component.inputText2 = "Аргентина манит негра";
+    component.isPalindrome2();
+    expect(component.result2).toBe(true)
+  })
+
+  it("Hello", () => {
+    component.inputText2 = "Hello";
+    component.isPalindrome2();
+    expect(component.result2).toBe(false)
+  })
+
+  it("empty", () => {
+    component.inputText2 = '';
+    component.isPalindrome2();
+    expect(component.result2).toBe(true);
+  });
+
+
+  it("A man, a plan, a canal, Panama", () => {
+    component.inputText2 = "A man, a plan, a canal, Panama";
+    component.isPalindrome2();
+    expect(component.result2).toBe(true)
+  });
+
+  it('should identify "12321" as a palindrome', () => {
+    component.inputText2 = '12321';
+    component.isPalindrome2();
+    expect(component.result2).toBe(true);
+  });
+
+  it('should identify "12345" as not a palindrome', () => {
+    component.inputText2 = '12345';
+    component.isPalindrome2();
+    expect(component.result2).toBe(false);
+  });
+
+
+
 });
